@@ -12,7 +12,7 @@
 # MODBUS
 # ------
 modbus:
-  - name: marstekvenus1 # Rename marstekvenus1 to marstekvenus2, or marstekvenus3 when multiple batteries
+  - name: marstekvenus1  # Rename marstekvenus1 to marstekvenus2, or marstekvenus3 when multiple batteries
     type: tcp
     host: [YOURIPADRESS]
     port: 502
@@ -175,7 +175,7 @@ modbus:
         offset: 0
         precision: 0
 
-      - name: "Marstek m1 Battery State Of Charge" # Venus E v3 only
+      - name: "Marstek m1 Battery State Of Charge"  # Venus E v3 only
         unique_id: marstek_m1_battery_state_of_charge
         address: 34002
         slave: 1
@@ -188,20 +188,20 @@ modbus:
         scale: 0.1
         offset: 0
         precision: 1
-
-      #      - name: "Marstek m1 Battery State Of Charge"
-      #        unique_id: marstek_m1_battery_state_of_charge
-      #        address: 32104
-      #        slave: 1
-      #        scan_interval: 30
-      #        input_type: holding
-      #        data_type: uint16
-      #        unit_of_measurement: "%"
-      #        device_class: battery
-      #        state_class: measurement
-      #        scale: 1
-      #        offset: 0
-      #        precision: 0
+        
+#      - name: "Marstek m1 Battery State Of Charge"
+#        unique_id: marstek_m1_battery_state_of_charge
+#        address: 32104
+#        slave: 1
+#        scan_interval: 30
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "%"
+#        device_class: battery
+#        state_class: measurement
+#        scale: 1
+#        offset: 0
+#        precision: 0
 
       - name: "Marstek m1 Battery Total Energy"
         unique_id: marstek_m1_battery_total_energy
@@ -259,47 +259,47 @@ modbus:
         offset: 0
         precision: 2
 
-      #      - name: "Marstek m1 AC Offgrid Voltage"  # 32300 gives 0x7E2C modbus error on v3
-      #        unique_id: marstek_m1_ac_offgrid_voltage
-      #        address: 32300
-      #        slave: 1
-      #        scan_interval: 30
-      #        input_type: holding
-      #        data_type: uint16
-      #        unit_of_measurement: V
-      #        device_class: voltage
-      #        state_class: measurement
-      #        scale: 0.1
-      #        offset: 0
-      #        precision: 1
+#      - name: "Marstek m1 AC Offgrid Voltage"  # 32300 gives 0x7E2C modbus error on v3
+#        unique_id: marstek_m1_ac_offgrid_voltage
+#        address: 32300
+#        slave: 1
+#        scan_interval: 30
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: V
+#        device_class: voltage
+#        state_class: measurement
+#        scale: 0.1
+#        offset: 0
+#        precision: 1
 
-      #      - name: "Marstek m1 AC Offgrid Current"
-      #        unique_id: marstek_m1_ac_offgrid_current
-      #        address: 32301
-      #        slave: 1
-      #        scan_interval: 30
-      #        input_type: holding
-      #        data_type: int16
-      #        unit_of_measurement: A
-      #       device_class: current
-      #        state_class: measurement
-      #        scale: 0.01
-      #        offset: 0
-      #        precision: 1
+#      - name: "Marstek m1 AC Offgrid Current"
+#        unique_id: marstek_m1_ac_offgrid_current
+#        address: 32301
+#        slave: 1
+#        scan_interval: 30
+#        input_type: holding
+#        data_type: int16
+#        unit_of_measurement: A
+#       device_class: current
+#        state_class: measurement
+#        scale: 0.01
+#        offset: 0
+#        precision: 1
 
-      #      - name: "Marstek m1 AC Offgrid Power"
-      #        unique_id: marstek_m1_ac_offgrid_power
-      #        address: 32302
-      #        slave: 1
-      #        scan_interval: 30
-      #        input_type: holding
-      #       data_type: int32
-      #       unit_of_measurement: W
-      #        device_class: power
-      #        state_class: measurement
-      #        scale: 1
-      #        offset: 0
-      #        precision: 0
+#      - name: "Marstek m1 AC Offgrid Power"
+#        unique_id: marstek_m1_ac_offgrid_power
+#        address: 32302
+#        slave: 1
+#        scan_interval: 30
+#        input_type: holding
+#       data_type: int32
+#       unit_of_measurement: W
+#        device_class: power
+#        state_class: measurement
+#        scale: 1
+#        offset: 0
+#        precision: 0
 
       - name: "Marstek m1 Lifetime Charging Energy"
         unique_id: marstek_m1_lifetime_charging_energy
@@ -540,6 +540,7 @@ modbus:
         scale: 0.001
         offset: 0
         precision: 3
+
 
       - name: "Marstek m1 Battery Cell 13 Voltage"
         unique_id: marstek_m1_battery_cell_13_voltage
@@ -849,7 +850,7 @@ modbus:
         unit_of_measurement: W
         scale: 1
         offset: 0
-        precision: 0
+        precision: 0        
 
       - name: "Marstek m1 Max Discharge Power Number"
         unique_id: marstek_m1_max_discharge_power_number
@@ -862,127 +863,6 @@ modbus:
         scale: 1
         offset: 0
         precision: 0
-
-      - name: "Marstek m1 MPPT1 Voltage"
-        unique_id: marstek_m1_mppt1_voltage
-        address: 30020
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "V"
-        scale: 0.1
-      - name: "Marstek m1 MPPT1 Current"
-        unique_id: marstek_m1_mppt1_current
-        address: 30024
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "A"
-        scale: 0.1
-      - name: "Marstek m1 MPPT1 Power"
-        unique_id: marstek_m1_mppt1_power
-        address: 30037
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "W"
-        scale: 0.1
-      - name: "Marstek m1 MPPT2 Voltage"
-        unique_id: marstek_m1_mppt2_voltage
-        address: 30021
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "V"
-        scale: 0.1
-      - name: "Marstek m1 MPPT2 Current"
-        unique_id: marstek_m1_mppt2_current
-        address: 30025
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "A"
-        scale: 0.1
-      - name: "Marstek m1 MPPT2 Power"
-        unique_id: marstek_m1_mppt2_power
-        address: 30038
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "W"
-        scale: 0.1
-      - name: "Marstek m1 MPPT3 Voltage"
-        unique_id: marstek_m1_mppt3_voltage
-        address: 30022
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "V"
-        scale: 0.1
-      - name: "Marstek m1 MPPT3 Current"
-        unique_id: marstek_m1_mppt3_current
-        address: 30026
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "A"
-        scale: 0.1
-      - name: "Marstek m1 MPPT3 Power"
-        unique_id: marstek_m1_mppt3_power
-        address: 30039
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "W"
-        scale: 0.1
-      - name: "Marstek m1 MPPT4 Voltage"
-        unique_id: marstek_m1_mppt4_voltage
-        address: 30023
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "V"
-        scale: 0.1
-      - name: "Marstek m1 MPPT4 Current"
-        unique_id: marstek_m1_mppt4_current
-        address: 30027
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "A"
-        scale: 0.1
-      - name: "Marstek m1 MPPT4 Power"
-        unique_id: marstek_m1_mppt4_power
-        address: 30040
-        slave: 1
-        scan_interval: 30
-        input_type: holding
-        data_type: uint16
-        state_class: measurement
-        unit_of_measurement: "W"
-        scale: 0.1
 
 # ---------------
 # TEMPLATE SENSOR
@@ -1130,54 +1010,9 @@ template:
             unknown
           {% endif %}
 
-      - name: "Marstek m1 MPPT Total Power"
-        unique_id: marstek_m1_mppt_total_power
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        state: >-
-          {{
-            states('sensor.marstek_m1_mppt1_power') | float(0)
-            + states('sensor.marstek_m1_mppt2_power') | float(0)
-            + states('sensor.marstek_m1_mppt3_power') | float(0)
-            + states('sensor.marstek_m1_mppt4_power') | float(0)
-          }}
-      - name: "Marstek m1 Real Battery Power"
-        unique_id: marstek_m1_real_battery_power
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        state: >-
-          {{
-            -(
-              states('sensor.marstek_m1_mppt_total_power') | float(0)
-              + states('sensor.marstek_m1_battery_power') | float(0)
-            )
-          }}
-      - name: "Marstek m1 Real Battery Import Power"
-        unique_id: marstek_m1_real_battery_import_power
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        availability: >-
-          {{ states('sensor.marstek_m1_real_battery_power') not in ['unknown', 'unavailable', 'none'] }}
-        state: >-
-          {% set power = states('sensor.marstek_m1_real_battery_power') | float(0) %}
-          {{ (-power) if power < 0 else 0 }}
-      - name: "Marstek m1 Real Battery Export Power"
-        unique_id: marstek_m1_real_battery_export_power
-        unit_of_measurement: W
-        device_class: power
-        state_class: measurement
-        availability: >-
-          {{ states('sensor.marstek_m1_real_battery_power') not in ['unknown', 'unavailable', 'none'] }}
-        state: >-
-          {% set power = states('sensor.marstek_m1_real_battery_power') | float(0) %}
-          {{ power if power > 0 else 0 }}
-
-  # ---------------
-  # TEMPLATE SELECT
-  # ---------------
+# ---------------
+# TEMPLATE SELECT
+# ---------------
   - select:
       - name: Marstek m1 RS485 Control Mode
         unique_id: marstek_m1_rs485_control_mode
@@ -1274,9 +1109,9 @@ template:
                 {% elif option == 'disable' %}1
                 {% endif %}
 
-  # ---------------
-  # TEMPLATE NUMBER
-  # ---------------
+# ---------------
+# TEMPLATE NUMBER
+# ---------------
   - number:
       - name: Marstek m1 Forcible charge Power
         unique_id: marstek_m1_forcible_charge_power
@@ -1361,33 +1196,8 @@ template:
         step: 1
         min: 0
         max: 2500
-        optimistic: true
 
-sensor:
-  - platform: integration
-    source: sensor.marstek_m1_mppt_total_power
-    name: "Marstek m1 MPPT Total Energy"
-    unique_id: marstek_m1_mppt_total_energy
-    unit_prefix: k
-    unit_time: h
-    method: left
-    round: 3
-  - platform: integration
-    source: sensor.marstek_m1_real_battery_import_power
-    name: "Marstek m1 Real Battery Import Energy"
-    unique_id: marstek_m1_real_battery_import_energy
-    unit_prefix: k
-    unit_time: h
-    method: left
-    round: 3
-  - platform: integration
-    source: sensor.marstek_m1_real_battery_export_power
-    name: "Marstek m1 Real Battery Export Energy"
-    unique_id: marstek_m1_real_battery_export_energy
-    unit_prefix: k
-    unit_time: h
-    method: left
-    round: 3
+        optimistic: true
 
 homeassistant:
   customize: # Add icons to modbus sensors
@@ -1436,28 +1246,5 @@ homeassistant:
     sensor.marstek_m1_battery_cell_15_voltage:
       icon: mdi:current-dc
     sensor.marstek_m1_battery_cell_16_voltage:
+
       icon: mdi:current-dc
-    sensor.marstek_m1_mppt1_voltage:
-      icon: mdi:solar-panel-large
-    sensor.marstek_m1_mppt1_current:
-      icon: mdi:current-ac
-    sensor.marstek_m1_mppt1_power:
-      icon: mdi:flash
-    sensor.marstek_m1_mppt2_voltage:
-      icon: mdi:solar-panel-large
-    sensor.marstek_m1_mppt2_current:
-      icon: mdi:current-ac
-    sensor.marstek_m1_mppt2_power:
-      icon: mdi:flash
-    sensor.marstek_m1_mppt3_voltage:
-      icon: mdi:solar-panel-large
-    sensor.marstek_m1_mppt3_current:
-      icon: mdi:current-ac
-    sensor.marstek_m1_mppt3_power:
-      icon: mdi:flash
-    sensor.marstek_m1_mppt4_voltage:
-      icon: mdi:solar-panel-large
-    sensor.marstek_m1_mppt4_current:
-      icon: mdi:current-ac
-    sensor.marstek_m1_mppt4_power:
-      icon: mdi:flash
