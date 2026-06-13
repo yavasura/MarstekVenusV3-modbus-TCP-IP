@@ -5,7 +5,7 @@
 # Fork of https://github.com/Superduper1969/MarstekVenus-ElfinEW11
 # -----------------------------------------------------------------
 # Use this file for the second Marstek Venus.
-# change host: [YOURIPADDRESS] to host: 192.168.0.245 (for example)
+# change host: "YOURIPADDRESS" to host: 192.168.0.245 (for example)
 # -----------------------------------------------------------------
 
 # ------
@@ -14,7 +14,7 @@
 modbus:
   - name: marstekvenus2  # Rename marstekvenus1 to marstekvenus2, or marstekvenus3 when multiple batteries
     type: tcp
-    host: [YOURIPADDRESS]
+    host: "YOURIPADDRESS"
     port: 502
     delay: 1
     message_wait_milliseconds: 35
@@ -1151,7 +1151,7 @@ template:
         unique_id: marstek_m2_charge_to_soc
         icon: mdi:tune-variant
         unit_of_measurement: "%"
-        state: "{{ states('sensor.charge_to_soc_number') | float(0) }}"
+        state: "{{ states('sensor.marstek_m2_charge_to_soc_number') | float(0) }}"
         set_value:
           - service: modbus.write_register
             data:
