@@ -61,7 +61,7 @@ cards:
           - entity: sensor.marstek_m4_battery_state_of_charge
             name: SOC
             type: line
-            color: "#ffg"
+            color: "#ffff00"
             stroke_width: 2
             extend_to: false
             curve: straight
