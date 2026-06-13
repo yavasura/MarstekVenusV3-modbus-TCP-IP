@@ -5,16 +5,16 @@
 # Fork of https://github.com/Superduper1969/MarstekVenus-ElfinEW11
 # -----------------------------------------------------------------
 # Use this file for the fourth Marstek Venus.
-# change host: [YOURIPADRESS] to host: 192.168.0.245 (for example)
+# change host: [YOURIPADDRESS] to host: 192.168.0.245 (for example)
 # -----------------------------------------------------------------
 
 # ------
 # MODBUS
 # ------
 modbus:
-  - name: marstekvenus4  # Rename marstekvenus4 to marstekvenus2, or marstekvenus3 when multiple batteries
+  - name: marstekvenus4  # Rename marstekvenus1 to marstekvenus2, or marstekvenus3 when multiple batteries
     type: tcp
-    host: [YOURIPADRESS]
+    host: [YOURIPADDRESS]
     port: 502
     delay: 1
     message_wait_milliseconds: 35

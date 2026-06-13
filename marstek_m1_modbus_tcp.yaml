@@ -14,7 +14,7 @@
 modbus:
   - name: marstekvenus1  # Rename marstekvenus1 to marstekvenus2, or marstekvenus3 when multiple batteries
     type: tcp
-    host: [YOURIPADRESS]
+    host: [YOURIPADDRESS]
     port: 502
     delay: 1
     message_wait_milliseconds: 35
